@@ -1,13 +1,16 @@
-// app/salary-calculator/page.tsx
+// app/finance/salary-calculator/page.tsx
 "use client";
 
 import React, { useState } from "react";
-import { calculateSalaryComparison, SalaryInput } from "../../../lib/salary";
-import { newRegimeConfig, oldRegimeConfig } from "../../../lib/taxRules";
-import { Card } from "../../../components/Card";
-import { InputField } from "../../../components/InputField";
-import { ResultRow } from "../../../components/ResultRow";
-import { BackLink } from "../../../components/BackLink";
+import {
+  calculateSalaryComparison,
+  SalaryInput,
+} from "../../../../lib/salary";
+import { newRegimeConfig, oldRegimeConfig } from "../../../../lib/taxRules";
+import { Card } from "../../../../components/Card";
+import { InputField } from "../../../../components/InputField";
+import { ResultRow } from "../../../../components/ResultRow";
+import { BackLink } from "../../../../components/BackLink";
 
 function formatCurrency(value: number) {
   if (!isFinite(value)) return "₹0";
@@ -36,7 +39,7 @@ export default function SalaryCalculatorPage() {
 
   return (
     <div className="space-y-6">
-      <BackLink />
+      <BackLink href="/finance" label="Back to finance tools" />
       <h2 className="text-2xl font-semibold tracking-tight">
         Salary &amp; Tax Calculator (India)
       </h2>
