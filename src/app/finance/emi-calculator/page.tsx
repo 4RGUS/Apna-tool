@@ -1,12 +1,14 @@
-// app/emi-calculator/page.tsx
+// app/finance/emi-calculator/page.tsx
 "use client";
 
 import React, { useState } from "react";
-import { calculateEmi } from "../../../lib/emi";
-import { Card } from "../../../components/Card";
-import { InputField } from "../../../components/InputField";
-import { ResultRow } from "../../../components/ResultRow";
-import { BackLink } from "../../../components/BackLink";
+import { calculateEmi } from "../../../../lib/emi";
+import { Card } from "../../../../components/Card";
+import { InputField } from "../../../../components/InputField";
+import { ResultRow } from "../../../../components/ResultRow";
+import { BackLink } from "../../../../components/BackLink";
+import { Footer } from "../../../../components/Footer";
+import { getCategory } from "@/data/tools";
 
 function formatCurrency(value: number) {
   if (!isFinite(value)) return "₹0";
@@ -24,10 +26,11 @@ export default function EmiCalculatorPage() {
   const tenureMonths = y * 12;
 
   const { emi, totalPayment, totalInterest } = calculateEmi(p, r, tenureMonths);
+  const financeFooter = getCategory("finance")?.footerMessage;
 
   return (
     <div className="space-y-6">
-      <BackLink />
+      <BackLink href="/finance" label="Back to finance tools" />
       <h2 className="text-2xl font-semibold tracking-tight">EMI Calculator</h2>
       <p className="text-sm text-gray-400">
         Estimate your monthly EMI, total interest and total payment for home,
@@ -80,6 +83,8 @@ export default function EmiCalculatorPage() {
           </div>
         </Card>
       </div>
+
+      <Footer message={financeFooter} />
     </div>
   );
 }

@@ -1,12 +1,14 @@
-// app/sip-calculator/page.tsx
+// app/finance/sip-calculator/page.tsx
 "use client";
 
 import React, { useState } from "react";
-import { calculateSipFutureValue } from "../../../lib/sip";
-import { Card } from "../../../components/Card";
-import { InputField } from "../../../components/InputField";
-import { ResultRow } from "../../../components/ResultRow";
-import { BackLink } from "../../../components/BackLink";
+import { calculateSipFutureValue } from "../../../../lib/sip";
+import { Card } from "../../../../components/Card";
+import { InputField } from "../../../../components/InputField";
+import { ResultRow } from "../../../../components/ResultRow";
+import { BackLink } from "../../../../components/BackLink";
+import { Footer } from "../../../../components/Footer";
+import { getCategory } from "@/data/tools";
 
 function formatCurrency(value: number) {
   if (!isFinite(value)) return "₹0";
@@ -23,10 +25,11 @@ export default function SipCalculatorPage() {
   const y = Number(years) || 0;
 
   const { totalInvested, futureValue } = calculateSipFutureValue(m, r, y);
+  const financeFooter = getCategory("finance")?.footerMessage;
 
   return (
     <div className="space-y-6">
-      <BackLink />
+      <BackLink href="/finance" label="Back to finance tools" />
       <h2 className="text-2xl font-semibold tracking-tight">SIP Calculator</h2>
       <p className="text-sm text-gray-400">
         Estimate the future value of your monthly SIP investments for Indian
@@ -76,6 +79,8 @@ export default function SipCalculatorPage() {
           </div>
         </Card>
       </div>
+
+      <Footer message={financeFooter} />
     </div>
   );
 }

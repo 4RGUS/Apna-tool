@@ -1,17 +1,12 @@
 name: CI
 
 on:
-  # Run on pushes to main (for safety)…
+  # Run on every push (any branch) and on PRs
   push:
-    branches:
-      - main
     paths-ignore:
       - "**.md"
       - "docs/**"
-  # …and on PRs targeting main (main use case)
   pull_request:
-    branches:
-      - main
     paths-ignore:
       - "**.md"
       - "docs/**"
