@@ -7,6 +7,8 @@ import { Card } from "../../../../components/Card";
 import { InputField } from "../../../../components/InputField";
 import { ResultRow } from "../../../../components/ResultRow";
 import { BackLink } from "../../../../components/BackLink";
+import { Footer } from "../../../../components/Footer";
+import { getCategory } from "@/data/tools";
 
 function formatCurrency(value: number) {
   if (!isFinite(value)) return "₹0";
@@ -24,6 +26,7 @@ export default function EmiCalculatorPage() {
   const tenureMonths = y * 12;
 
   const { emi, totalPayment, totalInterest } = calculateEmi(p, r, tenureMonths);
+  const financeFooter = getCategory("finance")?.footerMessage;
 
   return (
     <div className="space-y-6">
@@ -80,6 +83,8 @@ export default function EmiCalculatorPage() {
           </div>
         </Card>
       </div>
+
+      <Footer message={financeFooter} />
     </div>
   );
 }

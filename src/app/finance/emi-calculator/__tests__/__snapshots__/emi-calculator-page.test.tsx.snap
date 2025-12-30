@@ -7,7 +7,7 @@ exports[`EmiCalculatorPage snapshots matches the default render snapshot 1`] = `
   >
     <a
       class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 transition hover:text-white "
-      href="/"
+      href="/finance"
     >
       <span
         aria-hidden="true"
@@ -15,7 +15,7 @@ exports[`EmiCalculatorPage snapshots matches the default render snapshot 1`] = `
       >
         ←
       </span>
-      Back to all tools
+      Back to finance tools
     </a>
     <h2
       class="text-2xl font-semibold tracking-tight"
@@ -184,6 +184,13 @@ exports[`EmiCalculatorPage snapshots matches the default render snapshot 1`] = `
         </div>
       </div>
     </div>
+    <footer
+      class="mt-8 border-t border-gray-800 pt-4 text-xs text-gray-500 "
+    >
+      <p>
+        This is an approximate calculator for educational use only. Please consult a professional for tax or financial advice.
+      </p>
+    </footer>
   </div>
 </DocumentFragment>
 `;
@@ -195,7 +202,7 @@ exports[`EmiCalculatorPage snapshots matches the recalculated snapshot after upd
   >
     <a
       class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 transition hover:text-white "
-      href="/"
+      href="/finance"
     >
       <span
         aria-hidden="true"
@@ -203,7 +210,7 @@ exports[`EmiCalculatorPage snapshots matches the recalculated snapshot after upd
       >
         ←
       </span>
-      Back to all tools
+      Back to finance tools
     </a>
     <h2
       class="text-2xl font-semibold tracking-tight"
@@ -372,6 +379,13 @@ exports[`EmiCalculatorPage snapshots matches the recalculated snapshot after upd
         </div>
       </div>
     </div>
+    <footer
+      class="mt-8 border-t border-gray-800 pt-4 text-xs text-gray-500 "
+    >
+      <p>
+        This is an approximate calculator for educational use only. Please consult a professional for tax or financial advice.
+      </p>
+    </footer>
   </div>
 </DocumentFragment>
 `;
