@@ -21,7 +21,9 @@ describe("JsonEditorPage", () => {
     expect(
       screen.getByRole("heading", { name: /json editor & formatter/i })
     ).toBeInTheDocument();
-    const textarea = screen.getByLabelText(/json input/i) as HTMLTextAreaElement;
+    const textarea = screen.getByLabelText(
+      /json input/i
+    ) as HTMLTextAreaElement;
     expect(textarea.value).toContain(`"Ada Lovelace"`);
   });
 
@@ -92,11 +94,11 @@ describe("JsonEditorPage", () => {
     const originalCreateElement = document.createElement.bind(document);
     const createElementSpy = jest
       .spyOn(document, "createElement")
-      .mockImplementation(((tagName: string, options?: any) => {
+      .mockImplementation(((tagName: string, options?: unknown) => {
         if (tagName === "a") {
           return anchorEl;
         }
-        return originalCreateElement(tagName as any, options as any);
+        return originalCreateElement(tagName as never, options as never);
       }) as typeof document.createElement);
     const appendSpy = jest.spyOn(document.body, "appendChild");
     const removeSpy = jest.spyOn(document.body, "removeChild");
