@@ -1,0 +1,377 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`EmiCalculatorPage snapshots matches the default render snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-6"
+  >
+    <a
+      class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 transition hover:text-white "
+      href="/"
+    >
+      <span
+        aria-hidden="true"
+        class="text-base leading-none"
+      >
+        ←
+      </span>
+      Back to all tools
+    </a>
+    <h2
+      class="text-2xl font-semibold tracking-tight"
+    >
+      EMI Calculator
+    </h2>
+    <p
+      class="text-sm text-gray-400"
+    >
+      Estimate your monthly EMI, total interest and total payment for home, car or personal loans.
+    </p>
+    <div
+      class="grid gap-4 md:grid-cols-[1.1fr,0.9fr]"
+    >
+      <div
+        class="rounded-xl border border-gray-800 bg-gray-900/80 p-4 shadow-sm "
+      >
+        <h2
+          class="mb-3 text-lg font-semibold text-gray-100"
+        >
+          Loan Details
+        </h2>
+        <div
+          class="space-y-4"
+        >
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Loan amount
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 2500000"
+                type="number"
+                value="2000000"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                ₹
+              </span>
+            </div>
+          </label>
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Interest rate (per annum)
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 8.5"
+                type="number"
+                value="8.5"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                %
+              </span>
+            </div>
+          </label>
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Tenure (years)
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 20"
+                type="number"
+                value="20"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                years
+              </span>
+            </div>
+          </label>
+          <p
+            class="text-xs text-gray-500"
+          >
+            This is an approximate EMI. Actual values may differ based on your bank's compounding and charges.
+          </p>
+        </div>
+      </div>
+      <div
+        class="rounded-xl border border-gray-800 bg-gray-900/80 p-4 shadow-sm "
+      >
+        <h2
+          class="mb-3 text-lg font-semibold text-gray-100"
+        >
+          Result
+        </h2>
+        <div
+          class="space-y-3"
+        >
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Monthly EMI
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹17,356
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Total interest payable
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹2,165,552
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Total amount payable
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹4,165,552
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Tenure
+            </span>
+            <span
+              class="font-medium"
+            >
+              240 months
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EmiCalculatorPage snapshots matches the recalculated snapshot after updating inputs 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-6"
+  >
+    <a
+      class="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 transition hover:text-white "
+      href="/"
+    >
+      <span
+        aria-hidden="true"
+        class="text-base leading-none"
+      >
+        ←
+      </span>
+      Back to all tools
+    </a>
+    <h2
+      class="text-2xl font-semibold tracking-tight"
+    >
+      EMI Calculator
+    </h2>
+    <p
+      class="text-sm text-gray-400"
+    >
+      Estimate your monthly EMI, total interest and total payment for home, car or personal loans.
+    </p>
+    <div
+      class="grid gap-4 md:grid-cols-[1.1fr,0.9fr]"
+    >
+      <div
+        class="rounded-xl border border-gray-800 bg-gray-900/80 p-4 shadow-sm "
+      >
+        <h2
+          class="mb-3 text-lg font-semibold text-gray-100"
+        >
+          Loan Details
+        </h2>
+        <div
+          class="space-y-4"
+        >
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Loan amount
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 2500000"
+                type="number"
+                value="500000"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                ₹
+              </span>
+            </div>
+          </label>
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Interest rate (per annum)
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 8.5"
+                type="number"
+                value="7.5"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                %
+              </span>
+            </div>
+          </label>
+          <label
+            class="flex flex-col gap-1 text-sm text-gray-200"
+          >
+            <span>
+              Tenure (years)
+            </span>
+            <div
+              class="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-950 px-3 py-2"
+            >
+              <input
+                class="w-full bg-transparent text-base text-gray-100 outline-none"
+                placeholder="e.g. 20"
+                type="number"
+                value="20"
+              />
+              <span
+                class="text-xs text-gray-400"
+              >
+                years
+              </span>
+            </div>
+          </label>
+          <p
+            class="text-xs text-gray-500"
+          >
+            This is an approximate EMI. Actual values may differ based on your bank's compounding and charges.
+          </p>
+        </div>
+      </div>
+      <div
+        class="rounded-xl border border-gray-800 bg-gray-900/80 p-4 shadow-sm "
+      >
+        <h2
+          class="mb-3 text-lg font-semibold text-gray-100"
+        >
+          Result
+        </h2>
+        <div
+          class="space-y-3"
+        >
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Monthly EMI
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹4,635
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Total interest payable
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹334,311
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Total amount payable
+            </span>
+            <span
+              class="font-medium"
+            >
+              ₹834,311
+            </span>
+          </div>
+          <div
+            class="flex justify-between text-sm text-gray-200"
+          >
+            <span
+              class="text-gray-400"
+            >
+              Tenure
+            </span>
+            <span
+              class="font-medium"
+            >
+              180 months
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  # Run on pushes to main (for safety)…
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  # …and on PRs targeting main (main use case)
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+
+# If you push multiple times to the same branch, cancel old runs
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # ---- Static checks (fast) ----
+      - name: Lint
+        run: yarn lint
+
+      - name: Type check
+        run: yarn type-check
+
+      # ---- Tests ----
+      - name: Test
+        run: yarn test --watch=false --runInBand
+
+      # ---- Build (Next.js / frontend) ----
+      - name: Build
+        env:
+          NODE_ENV: production
+        run: yarn build
